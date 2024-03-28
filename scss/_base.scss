@@ -1,8 +1,30 @@
 .my-pink {
     background-color: lightpink;
+    // height: 200px;
+    margin-bottom: 500px;
+}
+
+.my-blue {
+    background-color: rgb(182, 248, 255);
     height: 200px;
+    margin-bottom: 500px;
 }
 
 * {
     font-family: "Be Vietnam Pro", sans-serif;
+    color: $main-dark-text-color;
+}
+
+.b-radius-20 {
+    border-radius: 20px;
+}
+
+
+
+.txt-black {
+    color: $color-black;
+}
+
+.txt-grey {
+    color: #4D6385;
 }

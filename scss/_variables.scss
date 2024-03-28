@@ -7,8 +7,12 @@ $border-color: #ffe7d2;
 $color-white: #ffffff;
 $wave-color: #FC6668;
 $color-black: #000000;
+$main-dark-text-color: #002050;
 $link-blue-underline: rgb(169, 222, 255);
 // $ghost-accent:#f43676;
+
+$plansete: 768px;
+$loptop : 1200px;
 
 @mixin flex-align-center {
     display: flex;
@@ -29,7 +33,7 @@ $link-blue-underline: rgb(169, 222, 255);
 
 
 @mixin gradient-btn {
-    background: $red-gradient;
+    background: $red-gradient ;
     border: none;
     color: $color-white;
 }
@@ -37,4 +41,35 @@ $link-blue-underline: rgb(169, 222, 255);
 @mixin text-select {
     background-color: #302d55;
     color: $color-white;
+}
+
+@mixin link-underline-blue-hover-before {
+    content: '';
+    background-color: $link-blue-underline;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 80%;
+    margin-left: 10%;
+    z-index: 1;
+    animation: linkUnderline 0.3s forwards;
+}
+
+@mixin author-card-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(22, 22, 22, 0.471);
+}
+
+@mixin medium-screen {
+    @media (min-width:$plansete) {
+        @content;
+    }
+}
+
+@mixin large-screen {
+    @media (min-width:$loptop) {
+        @content;
+    }
 }

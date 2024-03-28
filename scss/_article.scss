@@ -1,0 +1,62 @@
+.article-card {
+    padding: 20px;
+
+
+    .card-img {
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.294);
+        height: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+    }
+
+    .card-img-1 {
+        background-image: url('https://ghost.estudiopatagon.com/wavy/content/images/size/w660h660/2024/01/Untitled-3.webp');
+    }
+
+    .card-img-2 {
+        background-image: url('https://ghost.estudiopatagon.com/wavy/content/images/size/w660h660/2023/10/Untitled--5--2.jpeg');
+    }
+
+    .article-text {
+        .article-title {
+            font-size: 18px;
+            font-weight: 600;
+
+            &::selection {
+                @include text-select;
+            }
+
+            @include large-screen {
+                font-size: 28px;
+            }
+        }
+
+        .article-paragraph {
+            font-size: 14px;
+
+            &::selection {
+                @include text-select;
+            }
+
+            @include large-screen {
+                font-size: 18px;
+            }
+        }
+
+        .article-action {
+            font-size: 12px;
+
+            @include large-screen {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include medium-screen {
+        .card-img {
+            width: 200px;
+        }
+    }
+}

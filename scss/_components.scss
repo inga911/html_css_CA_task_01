@@ -1,0 +1,119 @@
+// AUTHOR CARD
+.author {
+    @include flex-align-center;
+    gap: 10px;
+    width: 85%;
+
+    &__img {
+
+        display: none;
+        @include author-card-img;
+
+        @include large-screen {
+            display: block;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+
+        @include large-screen {
+            font-size: 16px;
+        }
+
+        &--name {
+            color: $main-color-pink;
+            position: relative;
+
+            // &::after {
+            //     content: '\007E';
+            //     font-size: 50px;
+            //     position: absolute;
+            //     transform: translate(60%, -35%);
+            // }
+        }
+
+        .wave-small {
+            font-size: 40px;
+            line-height: 0.5;
+            color: $main-color-pink;
+
+        }
+    }
+}
+
+// BUTTON
+.main-btn {
+    @include gradient-btn;
+    @include link-base;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: $color-white;
+    font-size: 13px;
+
+    @include large-screen {
+        font-size: 16px;
+    }
+
+    .bi {
+        color: $color-white;
+    }
+}
+
+// Carousel & Accardion
+
+.next-btn {
+    @include flex-all-cennter;
+    @include gradient-btn;
+    border-radius: 50%;
+    font-size: 20px;
+
+    .bi {
+
+        color: $color-white;
+    }
+}
+
+.custom-accardion {
+    background-color: $color-white;
+    @include flex-all-cennter;
+    left: -25px;
+    position: relative;
+    border-radius: 0 20px 20px 0;
+}
+
+
+
+.number::before {
+    content: '';
+    @include gradient-btn;
+    width: 30px;
+    height: 30px;
+    padding: 12px;
+    @include flex-all-cennter;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.numb-1::before {
+    content: '1';
+}
+
+.numb-2::before {
+    content: '2';
+}
+
+.numb-3::before {
+    content: '3';
+}
+
+
+
+.accardion-inner-box {
+    width: 90%;
+    @include flex-align-center;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: auto;
+}
