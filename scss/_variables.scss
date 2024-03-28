@@ -1,4 +1,6 @@
 $red-gradient: linear-gradient(103deg, #fc6668 0%, #E10489 100%);
+$blue-gradient: linear-gradient(135deg, #4776E6 0%, #8E54E9 100%);
+
 $main-color-pink: #ff0081;
 $main-color-blue: #4f1cff;
 $color-yellow: #FFDB00;
@@ -11,7 +13,8 @@ $main-dark-text-color: #002050;
 $link-blue-underline: rgb(169, 222, 255);
 // $ghost-accent:#f43676;
 
-$plansete: 768px;
+$mobile: 490px;
+$tablet: 768px;
 $loptop : 1200px;
 
 @mixin flex-align-center {
@@ -62,8 +65,15 @@ $loptop : 1200px;
     box-shadow: 0 5px 5px rgba(22, 22, 22, 0.471);
 }
 
+@mixin small-screen {
+    @media (min-width:$mobile) {
+        @content;
+    }
+}
+
+
 @mixin medium-screen {
-    @media (min-width:$plansete) {
+    @media (min-width:$tablet) {
         @content;
     }
 }

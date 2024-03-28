@@ -8,23 +8,39 @@
     background-color: rgb(182, 248, 255);
     height: 200px;
     margin-bottom: 500px;
+    // top: 100px;
+    // position: sticky;
 }
 
 * {
     font-family: "Be Vietnam Pro", sans-serif;
     color: $main-dark-text-color;
+
+    &::selection {
+        @include text-select;
+    }
 }
 
 .b-radius-20 {
     border-radius: 20px;
 }
 
+// PAGINATION
+.pagination {
+    margin: 20px 0;
+    @include flex-all-cennter;
+    gap: 15px;
 
-
-.txt-black {
-    color: $color-black;
+    .next-page {
+        .main-btn {
+            a {
+                @include link-base;
+                color: $color-white;
+            }
+        }
+    }
 }
 
-.txt-grey {
-    color: #4D6385;
+.no-padding {
+    padding: 0 !important;
 }

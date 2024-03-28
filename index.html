@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CodeAcademy_task_01</title>
-    <!-- normalize -->
+    <!-- NORMALIZE -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -12,26 +12,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- bootstrap -->
+    <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="./css/bootstrap.css" />
-    <!-- bootstrap  js -->
+    <!-- BOOTSTRAP JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!-- bootstrap  icons -->
+    <!-- BOOTSTRAP ICONS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
-    <!-- custom style -->
+    <!-- CUSTOM STYLE -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container-md">
       <div class="row">
         <div class="col">
+          <!-- NAVBAR START -->
           <div class="navbar">
             <div class="navbar__hamburger-menu d-xl-none">
               <i class="bi bi-list"></i>
@@ -59,9 +60,10 @@
               <i class="bi bi-search"></i>
             </div>
           </div>
+          <!-- NAVBAR END -->
         </div>
       </div>
-      <!-- lg screen -->
+      <!-- CAROUSEL ON LARGE SCREEN START -->
       <div class="large-screen d-none d-lg-block">
         <div class="row">
           <div class="col-lg-6 col-xl-8">
@@ -244,8 +246,9 @@
           </div>
         </div>
       </div>
+      <!-- CAROUSEL ON LARGE SCREEN END -->
 
-      <!-- small screen -->
+      <!-- CAROUSEL ON SMALL SCREEN START -->
       <div class="small-screen d-lg-none">
         <div class="col-lg-8">
           <div
@@ -347,94 +350,493 @@
           </div>
         </div>
       </div>
+      <!-- CAROUSEL ON SMALL SCREEN END -->
 
-      <!-- Article cards -->
+      <!-- ARTICLE SECTION -->
       <h2 class="mt-5 article-main-title">Latest Articles</h2>
       <div class="row mt-5">
-        <div class="col-12 col-lg-8">
-          <!-- card 1 -->
-          <div class="article-card d-md-flex gap-2">
-            <div class="card-img card-img-1 col-12 col-lg-4"></div>
-            <div class="col col-lg-8">
-              <div class="article-text d-flex flex-column gap-2">
-                <div class="article-title mt-sm-2">
-                  Modern and colorful style of caricatures created by AI
-                </div>
-                <div class="author">
-                  <img
-                    class="author__img"
-                    src="https://randomuser.me/api/portraits/men/34.jpg"
-                    alt=""
-                  />
-                  <div
-                    class="author__text w-100 d-flex justify-content-between"
-                  >
-                    <span class="author__text--name"
-                      ><span class="txt-black">By </span>Adriana Martins</span
-                    >
-                    <span class="wave-small">&#126;</span>
-                    <div class="author__text--date">January 24, 2020</div>
+        <div class="col-12 col-lg-8 overflow-y-hidden no-padding">
+          <!-- MAIN LEFT SIDE START -->
+          <div class="left-side">
+            <!-- CARD 1 START -->
+            <div class="article-card d-md-flex gap-2">
+              <div class="card-img card-img-1 col-sm-12 col-lg-4"></div>
+              <div class="col col-lg-8">
+                <div class="article-text d-flex flex-column gap-2">
+                  <div class="article-title mt-3">
+                    Modern and colorful style of caricatures created by AI
                   </div>
-                </div>
-                <div class="article-paragraph">
-                  AI-powered tools and algorithms have redefined caricature
-                  creation in novel....
-                </div>
-                <div
-                  class="article-action d-flex justify-content-between align-items-center"
-                >
-                  <a href="#" class="main-btn"> Read More </a>
-                  <div class="txt-grey">
-                    <i class="bi bi-book"></i> 2 min read
+                  <div class="author">
+                    <div
+                      class="author__text w-100 d-flex justify-content-between"
+                    >
+                      <span class="author__text--name"
+                        ><span class="txt-black">By </span>Adriana Martins</span
+                      >
+                      <span class="wave-small">&#126;</span>
+                      <div class="author__text--date">January 24, 2020</div>
+                    </div>
+                  </div>
+                  <div class="article-paragraph">
+                    AI-powered tools and algorithms have redefined caricature
+                    creation in novel....
+                  </div>
+                  <div
+                    class="article-action d-flex justify-content-between align-items-center"
+                  >
+                    <a href="#" class="main-btn"> Read More </a>
+                    <div class="read-time">
+                      <i class="bi bi-book"></i> 2 min read
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- card 2 -->
-          <div class="article-card d-md-flex gap-2">
-            <div class="card-img card-img-2 col-12 col-lg-4"></div>
-            <div class="col col-lg-8">
-              <div class="article-text d-flex flex-column gap-2">
-                <div class="article-title">
-                  Modern and colorful style of caricatures created by AI
-                </div>
-                <div class="author">
+            <!-- CARD 1 END -->
+            <!-- CARD 2 START -->
+            <div class="article-card d-md-flex gap-2">
+              <div class="card-img card-img-2 col-12 col-lg-4">
+                <div class="lock-bg">
                   <img
-                    class="author__img"
-                    src="https://randomuser.me/api/portraits/men/34.jpg"
+                    src="https://www.svgrepo.com/show/99424/lock.svg"
                     alt=""
+                    class="lock-svg"
                   />
-                  <div
-                    class="author__text w-100 d-flex justify-content-between"
-                  >
-                    <span class="author__text--name"
-                      ><span class="txt-black">By </span>Adriana Martins</span
-                    >
-                    <span class="wave-small">&#126;</span>
-                    <div class="author__text--date">January 24, 2020</div>
+                </div>
+              </div>
+              <div class="col col-lg-8">
+                <div class="article-text d-flex flex-column gap-2">
+                  <div class="article-title mt-3">
+                    Modern and colorful style of caricatures created by AI
                   </div>
-                </div>
-                <div class="article-paragraph">
-                  AI-powered tools and algorithms have redefined caricature
-                  creation in novel....
-                </div>
-                <div
-                  class="article-action d-flex justify-content-between align-items-center"
-                >
-                  <a href="#" class="main-btn"> Read More </a>
-                  <div class="txt-grey">
-                    <i class="bi bi-book"></i> 2 min read
+                  <div class="author">
+                    <div
+                      class="author__text w-100 d-flex justify-content-between"
+                    >
+                      <span class="author__text--name"
+                        ><span class="txt-black">By </span>Adriana Martins</span
+                      >
+                      <span class="wave-small">&#126;</span>
+                      <div class="author__text--date">January 24, 2020</div>
+                    </div>
+                  </div>
+                  <div class="article-paragraph">
+                    AI-powered tools and algorithms have redefined caricature
+                    creation in novel....
+                  </div>
+                  <div
+                    class="article-action d-flex justify-content-between align-items-center"
+                  >
+                    <a href="#" class="main-btn"> Read More </a>
+                    <div class="read-time">
+                      <i class="bi bi-book"></i> 2 min read
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+            <!-- CARD 2 END -->
+            <!-- CARD 3 START -->
+            <div class="article-card d-md-flex gap-2">
+              <div class="card-img card-img-3 col-12 col-lg-4"></div>
+              <div class="col col-lg-8">
+                <div class="article-text d-flex flex-column gap-2">
+                  <div class="article-title mt-3">
+                    Modern and colorful style of caricatures created by AI
+                  </div>
+                  <div class="author">
+                    <div
+                      class="author__text w-100 d-flex justify-content-between"
+                    >
+                      <span class="author__text--name"
+                        ><span class="txt-black">By </span>Adriana Martins</span
+                      >
+                      <span class="wave-small">&#126;</span>
+                      <div class="author__text--date">January 24, 2020</div>
+                    </div>
+                  </div>
+                  <div class="article-paragraph">
+                    AI-powered tools and algorithms have redefined caricature
+                    creation in novel....
+                  </div>
+                  <div
+                    class="article-action d-flex justify-content-between align-items-center"
+                  >
+                    <a href="#" class="main-btn"> Read More </a>
+                    <div class="read-time">
+                      <i class="bi bi-book"></i> 2 min read
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 3 END -->
 
-        <div class="col-12 col-lg-4">
-          <div class="my-blue"></div>
+            <!-- NEWSLETTER START -->
+            <div class="newsletter">
+              <div class="newsletter__title">Subscribe to our Newsletter</div>
+              <div class="newsletter__paragraph">
+                Subscribe to our email newsletter and unlock access to
+                <b>members-only</b> content and <b>exclusive updates</b>.
+              </div>
+              <form>
+                <div>
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your email address"
+                    />
+                    <button class="btn main-btn" type="submit">
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- NEWSLETTER END -->
+
+            <!-- CARD 4 START -->
+            <div class="article-card d-md-flex gap-2">
+              <div class="card-img card-img-4 col-12 col-lg-4">
+                <div class="lock-bg">
+                  <img
+                    src="https://www.svgrepo.com/show/1195/premium-badge.svg"
+                    alt=""
+                    class="lock-svg"
+                  />
+                </div>
+              </div>
+              <div class="col col-lg-8">
+                <div class="article-text d-flex flex-column gap-2">
+                  <div class="article-title mt-3">
+                    Modern and colorful style of caricatures created by AI
+                  </div>
+                  <div class="author">
+                    <div
+                      class="author__text w-100 d-flex justify-content-between"
+                    >
+                      <span class="author__text--name"
+                        ><span class="txt-black">By </span>Adriana Martins</span
+                      >
+                      <span class="wave-small">&#126;</span>
+                      <div class="author__text--date">January 24, 2020</div>
+                    </div>
+                  </div>
+                  <div class="article-paragraph">
+                    AI-powered tools and algorithms have redefined caricature
+                    creation in novel....
+                  </div>
+                  <div
+                    class="article-action d-flex justify-content-between align-items-center"
+                  >
+                    <a href="#" class="main-btn"> Read More </a>
+                    <div class="read-time">
+                      <i class="bi bi-book"></i> 2 min read
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 4 END -->
+
+            <!-- CARD 5 START -->
+            <div class="article-card d-md-flex gap-2">
+              <div class="card-img card-img-5 col-12 col-lg-4"></div>
+              <div class="col col-lg-8">
+                <div class="article-text d-flex flex-column gap-2">
+                  <div class="article-title mt-3">
+                    Modern and colorful style of caricatures created by AI
+                  </div>
+                  <div class="author">
+                    <div
+                      class="author__text w-100 d-flex justify-content-between"
+                    >
+                      <span class="author__text--name"
+                        ><span class="txt-black">By </span>Adriana Martins</span
+                      >
+                      <span class="wave-small">&#126;</span>
+                      <div class="author__text--date">January 24, 2020</div>
+                    </div>
+                  </div>
+                  <div class="article-paragraph">
+                    AI-powered tools and algorithms have redefined caricature
+                    creation in novel....
+                  </div>
+                  <div
+                    class="article-action d-flex justify-content-between align-items-center"
+                  >
+                    <a href="#" class="main-btn"> Read More </a>
+                    <div class="read-time">
+                      <i class="bi bi-book"></i> 2 min read
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 5 END -->
+
+            <!-- CARD 6 START -->
+            <div class="article-card d-md-flex gap-2">
+              <div class="card-img card-img-6 col-12 col-lg-4"></div>
+              <div class="col col-lg-8">
+                <div class="article-text d-flex flex-column gap-2">
+                  <div class="article-title mt-3">
+                    Modern and colorful style of caricatures created by AI
+                  </div>
+                  <div class="author">
+                    <div
+                      class="author__text w-100 d-flex justify-content-between"
+                    >
+                      <span class="author__text--name"
+                        ><span class="txt-black">By </span>Adriana Martins</span
+                      >
+                      <span class="wave-small">&#126;</span>
+                      <div class="author__text--date">January 24, 2020</div>
+                    </div>
+                  </div>
+                  <div class="article-paragraph">
+                    AI-powered tools and algorithms have redefined caricature
+                    creation in novel....
+                  </div>
+                  <div
+                    class="article-action d-flex justify-content-between align-items-center"
+                  >
+                    <a href="#" class="main-btn"> Read More </a>
+                    <div class="read-time">
+                      <i class="bi bi-book"></i> 2 min read
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 6 END -->
+
+            <!-- PAGINATION START -->
+            <div class="pagination">
+              <div class="page-number">Page 1 of 2</div>
+              <div class="next-page">
+                <button class="main-btn">
+                  <a href="#">Next Page</a>
+                </button>
+              </div>
+            </div>
+            <!-- PAGINATION END -->
+          </div>
         </div>
+        <!-- MAIN LEFT SIDE END -->
+
+        <!-- MAIN RIGHT SIDE START -->
+        <div class="d-none d-lg-block col-lg-4">
+          <div class="right-cards position-sticky">
+            <!-- profile card start -->
+            <div class="right-card">
+              <div class="right-card__title">About Me</div>
+              <div class="right-card__content">
+                <div class="right-card__content--profile">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="Profile image"
+                  />
+                  <div class="info">
+                    <div><b>Adriana Martins</b></div>
+                    <div>Canada</div>
+                  </div>
+                </div>
+                <div class="right-card__content--text">
+                  Hello! My name is Adriana Martins working from Chile. I create
+                  some Ghost and Wordpress themes for differents markets, also,
+                  i offer live support via our ticket system.
+                </div>
+              </div>
+            </div>
+            <!-- profile card end -->
+
+            <!-- socials card start -->
+            <div class="right-card">
+              <div class="right-card__title">Socials Profiles</div>
+              <div class="right-card__content card-socials">
+                <a href="#">
+                  <div class="right-cards__content--soc">
+                    <i class="bi bi-facebook"></i>
+                    <div class="soc-title">Facebook</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="right-cards__content--soc">
+                    <i class="bi bi-twitter-x"></i>
+                    <div class="soc-title">Twitter</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="right-cards__content--soc">
+                    <i class="bi bi-rss"></i>
+                    <div class="soc-title">RSS</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- socials card end -->
+
+            <!-- features card start -->
+            <div class="right-card">
+              <div class="right-card__title">Featured Articles</div>
+              <div class="right-card__content">
+                <div class="mini-article">
+                  <a href="#">
+                    <img
+                      src="https://ghost.estudiopatagon.com/wavy/content/images/size/w660h660/2023/10/Firefly-tierno-bal-n-de-b-isbol--render-3d-sobre-fondo-plano--colores-pasteles-suaves--fondo-de-1-o-.jpg"
+                      alt=""
+                    />
+                  </a>
+                  <div class="mini-article-text">
+                    <a href="#">
+                      <b
+                        >Some sports that will be affected by big-data
+                        advances</b
+                      >
+                    </a>
+                    <a href="#" class="mini-article-author mt-2">
+                      By <span>Adriana Martins</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="mini-article">
+                  <a href="#">
+                    <img
+                      src="https://ghost.estudiopatagon.com/wavy/content/images/size/w660h660/2023/10/Untitled--2--2.jpeg"
+                      alt=""
+                    />
+                  </a>
+                  <div class="mini-article-text">
+                    <a href="#">
+                      <b
+                        >Animals that captivate people with their
+                        intelligence</b
+                      >
+                    </a>
+                    <a href="#" class="mini-article-author mt-2">
+                      By <span>James Brawson</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="mini-article">
+                  <a href="#">
+                    <img
+                      src="https://ghost.estudiopatagon.com/wavy/content/images/size/w1075h650/2023/10/Firefly-c-modo-sill-n-blanco--render-3d-sobre-fondo-plano--colores-pasteles-suaves--fondo-de-1-o-2-c--2-.jpeg"
+                      alt=""
+                    />
+                  </a>
+
+                  <div class="mini-article-text">
+                    <a href="#">
+                      <b
+                        >Quickly plan interior design with the help of
+                        renderings</b
+                      >
+                    </a>
+                    <a href="#" class="mini-article-author mt-2"
+                      >By <span>Jonathan Doe</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- features card end -->
+
+            <!-- categories card start -->
+            <div class="right-card">
+              <div class="right-card__title">Categories</div>
+              <div class="right-card__content">
+                <div class="right-card__content--gallery"></div>
+                <div id="smallCarousel" class="carousel slide">
+                  <div class="carousel-inner b-radius-20">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://ghost.estudiopatagon.com/wavy/content/images/size/w630h400/2023/10/Untitled--7--1.jpeg"
+                        class="d-block w-100"
+                        alt="Book"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://ghost.estudiopatagon.com/wavy/content/images/size/w630h400/2024/01/Firefly-3D-render-of-a-fluffy-building--Egypt--minimal--inspired-by-Ricardo-Bofill--retrofuturism--p.jpg"
+                        class="d-block w-100"
+                        alt="Castle"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://ghost.estudiopatagon.com/wavy/content/images/size/w630h400/2023/10/Untitled--10-.jpeg"
+                        class="d-block w-100"
+                        alt="White bear"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://ghost.estudiopatagon.com/wavy/content/images/size/w630h400/2023/10/Untitled--8-.jpeg"
+                        class="d-block w-100"
+                        alt="Phone"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://ghost.estudiopatagon.com/wavy/content/images/size/w630h400/2023/10/Untitled--11-.jpeg"
+                        class="d-block w-100"
+                        alt="Glass of water"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://ghost.estudiopatagon.com/wavy/content/images/size/w630h400/2023/10/Firefly-edificio-blanco--render-3d-sobre-fondo-plano--colores-pasteles-suaves--fondo-de-1-color-azul.jpg"
+                        class="d-block w-100"
+                        alt="Box"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="previous gallery-btn"
+                    type="button"
+                    data-bs-target="#smallCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <i class="bi bi-arrow-left-short"></i>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="next gallery-btn"
+                    type="button"
+                    data-bs-target="#smallCarousel"
+                    data-bs-slide="next"
+                  >
+                    <i class="bi bi-arrow-right-short"></i>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- categories card end -->
+          </div>
+        </div>
+        <!-- MAIN RIGHT SIDE END -->
+        <footer>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+          <h1>footer</h1>
+        </footer>
       </div>
     </div>
   </body>

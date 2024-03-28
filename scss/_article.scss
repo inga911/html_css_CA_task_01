@@ -1,14 +1,68 @@
+.article-main-title {
+    font-weight: 600;
+    position: relative;
+    margin-left: 40px;
+
+    &::before {
+        content: '\007E';
+        position: absolute;
+        font-size: 50px;
+        // height: 2px;
+        line-height: 0.3;
+        top: 3px;
+        left: -30px;
+        color: $wave-color;
+    }
+
+    &::after {
+        content: '\007E';
+        position: absolute;
+        font-size: 50px;
+        line-height: 0.3;
+        bottom: 3px;
+        left: -30px;
+        color: $main-color-pink;
+    }
+
+    @include medium-screen {
+
+        &::before {
+            top: 6px;
+        }
+
+        &::after {
+            bottom: 6px;
+        }
+    }
+}
+
 .article-card {
     padding: 20px;
 
 
     .card-img {
         box-shadow: 0 6px 6px rgba(0, 0, 0, 0.294);
-        height: 200px;
+        height: 250px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 20px;
+
+        .lock-bg {
+            width: 40px;
+            height: 40px;
+            background-color: $color-yellow;
+            position: absolute;
+            left: 30px;
+            border-radius: 0 0 5px 5px;
+            @include flex-all-cennter;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.322);
+
+            .lock-svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 
     .card-img-1 {
@@ -16,17 +70,39 @@
     }
 
     .card-img-2 {
+        position: relative;
         background-image: url('https://ghost.estudiopatagon.com/wavy/content/images/size/w660h660/2023/10/Untitled--5--2.jpeg');
     }
 
+    .card-img-3 {
+        background-image: url('https://ghost.estudiopatagon.com/wavy/content/images/size/w660h660/2023/10/Firefly-tierno-bal-n-de-b-isbol--render-3d-sobre-fondo-plano--colores-pasteles-suaves--fondo-de-1-o-.jpg');
+    }
+
+    .card-img-4 {
+        position: relative;
+        background-image: url('    https://ghost.estudiopatagon.com/wavy/content/images/size/w660h660/2023/10/Firefly-flor--render-3d-sobre-fondo-plano--colores-pasteles-suaves--fondo-de-1-o-2-colores-morados-y.jpg');
+    }
+
+    .card-img-5 {
+        background-image: url('https://ghost.estudiopatagon.com/wavy/content/images/size/w660h660/2023/10/Untitled--2--2.jpeg');
+    }
+
+    .card-img-6 {
+        background-image: url('https://ghost.estudiopatagon.com/wavy/content/images/size/w660h660/2023/10/Firefly-joystick-blanco--render-3d-sobre-fondo-plano--colores-pasteles-suaves--fondo-de-1-o-2-colore--2-.jpg');
+    }
+
     .article-text {
+        @include medium-screen {
+            padding: 20px 20px 20px 30px;
+        }
+
+        @include large-screen {
+            padding: 7px 10px 7px 15px;
+        }
+
         .article-title {
             font-size: 18px;
             font-weight: 600;
-
-            &::selection {
-                @include text-select;
-            }
 
             @include large-screen {
                 font-size: 28px;
@@ -35,10 +111,6 @@
 
         .article-paragraph {
             font-size: 14px;
-
-            &::selection {
-                @include text-select;
-            }
 
             @include large-screen {
                 font-size: 18px;
@@ -51,12 +123,18 @@
             @include large-screen {
                 font-size: 14px;
             }
+
+            .read-time {
+                color: #4D6385;
+            }
         }
     }
 
     @include medium-screen {
         .card-img {
-            width: 200px;
+            width: 250px;
+            height: 250px;
+
         }
     }
 }

@@ -2,7 +2,15 @@
 .author {
     @include flex-align-center;
     gap: 10px;
-    width: 85%;
+    width: fit-content;
+
+    @include medium-screen {
+        width: 85%;
+    }
+
+    @include large-screen {
+        width: 85%;
+    }
 
     &__img {
 
@@ -24,13 +32,6 @@
         &--name {
             color: $main-color-pink;
             position: relative;
-
-            // &::after {
-            //     content: '\007E';
-            //     font-size: 50px;
-            //     position: absolute;
-            //     transform: translate(60%, -35%);
-            // }
         }
 
         .wave-small {
@@ -58,9 +59,13 @@
     .bi {
         color: $color-white;
     }
+
+    &:hover {
+        color: $color-white;
+    }
 }
 
-// Carousel & Accardion
+// CAROUSEL & ACCARDION
 
 .next-btn {
     @include flex-all-cennter;

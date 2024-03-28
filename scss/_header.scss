@@ -9,20 +9,12 @@
 
         h1 {
             font-weight: 700;
-
-            &::selection {
-                @include text-select;
-            }
         }
 
         p {
             font-size: 18px;
             width: 80%;
             margin: 40px 10%;
-
-            &::selection {
-                @include text-select;
-            }
         }
     }
 }

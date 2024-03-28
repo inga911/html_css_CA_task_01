@@ -1,0 +1,60 @@
+.newsletter {
+    background: $blue-gradient;
+    text-align: center;
+    padding: 30px 10px;
+    margin: 30px 0;
+    width: 100%;
+
+    @include medium-screen {
+        border-radius: 13px;
+    }
+
+    &__title {
+        font-size: 22px;
+        color: $color-white;
+        padding: 10px;
+        font-weight: 600;
+
+        @include large-screen {
+            font-size: 34px;
+        }
+    }
+
+    &__paragraph {
+        color: $color-white;
+        font-size: 15px;
+        line-height: 2;
+
+        b {
+            color: inherit;
+        }
+    }
+
+    form {
+        margin: 10px auto;
+        width: 80%;
+
+        @include large-screen {
+            width: 50%;
+        }
+
+        input {
+            padding: 12px;
+        }
+
+        .main-btn {
+            font-weight: 600;
+            font-size: 12px;
+
+            @include large-screen {
+                font-size: 16px;
+            }
+        }
+
+        input::placeholder {
+            color: rgb(172, 171, 171);
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    }
+}
