@@ -1,1 +1,156 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.my-pink {
+  background-color: lightpink;
+  height: 200px;
+}
+
+* {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.navbar {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+.navbar__hamburger-menu {
+  color: #000000;
+  font-size: 30px;
+}
+.navbar__nav a {
+  text-decoration: none;
+  color: #000000;
+  padding: 10px 15px;
+  position: relative;
+  display: bock;
+  z-index: 2;
+  font-weight: 500;
+}
+.navbar__nav a:hover::before {
+  content: "";
+  background-color: rgb(169, 222, 255);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 80%;
+  margin-left: 10%;
+  z-index: 1;
+  animation: linkUnderline 0.3s forwards;
+}
+.navbar__nav a:active {
+  color: #ff0081;
+}
+.navbar__login-box .login-link {
+  text-decoration: none;
+  color: #000000;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+}
+.navbar__login-box .login-link:hover::before {
+  content: "";
+  background-color: rgb(169, 222, 255);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 80%;
+  margin-left: 10%;
+  z-index: 1;
+  animation: linkUnderline 0.3s forwards;
+}
+.navbar__login-box .subscribe-btn {
+  text-decoration: none;
+  color: #000000;
+  background: linear-gradient(103deg, #fc6668 0%, #E10489 100%);
+  border: none;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 8px 20px;
+}
+.navbar__search-btn {
+  background: linear-gradient(103deg, #fc6668 0%, #E10489 100%);
+  border: none;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 8px 13px;
+}
+
+@keyframes linkUnderline {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 5px;
+    z-index: -1;
+  }
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.header__text {
+  width: 80%;
+  padding-top: 60px;
+}
+.header__text h1 {
+  font-weight: 700;
+}
+.header__text h1::-moz-selection {
+  background-color: #302d55;
+  color: #ffffff;
+}
+.header__text h1::selection {
+  background-color: #302d55;
+  color: #ffffff;
+}
+.header__text p {
+  font-size: 18px;
+  width: 80%;
+  margin: 40px 10%;
+}
+.header__text p::-moz-selection {
+  background-color: #302d55;
+  color: #ffffff;
+}
+.header__text p::selection {
+  background-color: #302d55;
+  color: #ffffff;
+}
+.header .switch-wrapper {
+  position: relative;
+  display: inline-flex;
+  padding: 4px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 5px 5px lightgray;
+}
+.header .switch-wrapper [type=radio] {
+  display: none;
+}
+.header .switch-wrapper [type=radio]:checked#yearly + label[for=monthly] ~ .highlighter {
+  transform: translateX(100%);
+}
+.header .switch-wrapper label {
+  font-size: 16px;
+  z-index: 1;
+  min-width: 100px;
+  line-height: 2;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: color 0.25s ease-in-out;
+}
+.header .switch-wrapper .highlighter {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 5px;
+  background: linear-gradient(103deg, #fc6668 0%, #E10489 100%);
+  transition: transform 0.25s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

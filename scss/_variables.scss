@@ -1,0 +1,40 @@
+$red-gradient: linear-gradient(103deg, #fc6668 0%, #E10489 100%);
+$main-color-pink: #ff0081;
+$main-color-blue: #4f1cff;
+$color-yellow: #FFDB00;
+$card-bg-light: #fff9f3;
+$border-color: #ffe7d2;
+$color-white: #ffffff;
+$wave-color: #FC6668;
+$color-black: #000000;
+$link-blue-underline: rgb(169, 222, 255);
+// $ghost-accent:#f43676;
+
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-all-cennter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin link-base {
+    text-decoration: none;
+    color: $color-black;
+}
+
+
+
+@mixin gradient-btn {
+    background: $red-gradient;
+    border: none;
+    color: $color-white;
+}
+
+@mixin text-select {
+    background-color: #302d55;
+    color: $color-white;
+}
