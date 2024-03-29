@@ -1,17 +1,3 @@
-.my-pink {
-    background-color: lightpink;
-    // height: 200px;
-    margin-bottom: 500px;
-}
-
-.my-blue {
-    background-color: rgb(182, 248, 255);
-    height: 200px;
-    margin-bottom: 500px;
-    // top: 100px;
-    // position: sticky;
-}
-
 * {
     font-family: "Be Vietnam Pro", sans-serif;
     color: $main-dark-text-color;
@@ -21,26 +7,83 @@
     }
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .b-radius-20 {
     border-radius: 20px;
 }
 
-// PAGINATION
-.pagination {
-    margin: 20px 0;
-    @include flex-all-cennter;
-    gap: 15px;
-
-    .next-page {
-        .main-btn {
-            a {
-                @include link-base;
-                color: $color-white;
-            }
-        }
-    }
-}
-
 .no-padding {
     padding: 0 !important;
+}
+
+// .header {
+//     position: relative;
+
+//     &::before,
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         left: 0;
+//         width: 120%;
+//         margin-left: -10%;
+//         height: 100%;
+//         background-image: url('https://png.pngtree.com/png-vector/20220525/ourmid/pngtree-undulate-gray-wave-swirl-png-image_4732288.png');
+//         background-position: top;
+//         background-repeat: repeat-x;
+//         background-size: 80%;
+//         transform: rotate(-15deg);
+//         z-index: -2;
+//     }
+
+//     &::before {
+//         top: 0;
+//         animation: header-bg1 3s infinite linear;
+//     }
+
+//     &::after {
+//         bottom: 0;
+//         animation: header-bg2 3s infinite linear;
+//     }
+// }
+
+// @keyframes header-bg1 {
+
+//     0%,
+//     100% {
+//         transform: translateY(0);
+//     }
+
+//     50% {
+//         transform: translateY(-10%);
+//     }
+// }
+
+// @keyframes header-bg2 {
+
+//     0%,
+//     100% {
+//         transform: translateY(0);
+//     }
+
+//     50% {
+//         transform: translateY(10%);
+//     }
+// }
+
+
+.text-blue-underline {
+    transition: background-size 0.3s ease;
+    cursor: pointer;
+    display: inline;
+    background-image: linear-gradient(to right, #aef3ff, #aef3ff);
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: 0 100%;
+
+    &:hover {
+        background-size: 100% 4px;
+    }
 }

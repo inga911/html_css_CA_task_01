@@ -10,3 +10,16 @@
         z-index: -1;
     }
 }
+
+// SMALL WAVE ON BUTTONS
+
+@keyframes smallWave {
+
+    0% {
+        background-position-x: -20px;
+    }
+
+    100% {
+        background-position-x: 508px;
+    }
+}

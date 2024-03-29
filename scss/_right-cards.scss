@@ -1,7 +1,6 @@
 .right-cards {
     top: 100px;
 
-
     .right-card {
         background-color: $card-bg-light;
         border: 1px solid $border-color;
@@ -61,7 +60,7 @@
 
             // SOCIAL CARDS
             .right-cards__content--soc {
-                @include flex-all-cennter;
+                @include flex-all-center;
                 flex-direction: column;
                 border: 1px solid $border-color;
                 padding: 10px;
@@ -84,9 +83,6 @@
                     font-size: 12px;
                 }
             }
-
-            // CATEGORIES
-            &--gallery {}
         }
 
         .card-socials {
@@ -150,13 +146,8 @@
 
                 a {
                     @include link-base;
-
-                    // &:hover {
-                    //     color: $main-dark-text-color;
-                    // }
                 }
             }
-
         }
     }
 }

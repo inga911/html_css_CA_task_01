@@ -7,7 +7,6 @@
         content: '\007E';
         position: absolute;
         font-size: 50px;
-        // height: 2px;
         line-height: 0.3;
         top: 3px;
         left: -30px;
@@ -25,7 +24,6 @@
     }
 
     @include medium-screen {
-
         &::before {
             top: 6px;
         }
@@ -39,7 +37,6 @@
 .article-card {
     padding: 20px;
 
-
     .card-img {
         box-shadow: 0 6px 6px rgba(0, 0, 0, 0.294);
         height: 250px;
@@ -47,6 +44,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 20px;
+        position: relative;
+        overflow: hidden;
 
         .lock-bg {
             width: 40px;
@@ -55,13 +54,24 @@
             position: absolute;
             left: 30px;
             border-radius: 0 0 5px 5px;
-            @include flex-all-cennter;
+            @include flex-all-center;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.322);
 
             .lock-svg {
                 width: 20px;
                 height: 20px;
             }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover .card-img-text {
+            @include medium-screen {
+                opacity: 1;
+            }
+
         }
     }
 
@@ -134,7 +144,31 @@
         .card-img {
             width: 250px;
             height: 250px;
-
         }
+    }
+}
+
+.card-img-text {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.439) 10%, rgba(0, 0, 0, 0) 100%);
+    transition: opacity 0.35s ease;
+
+    i,
+    span {
+        color: $color-white;
+        font-size: 14px;
+        letter-spacing: 0.8px;
+
     }
 }

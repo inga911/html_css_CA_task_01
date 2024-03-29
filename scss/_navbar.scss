@@ -15,7 +15,7 @@
             font-weight: 500;
 
             &:hover::before {
-                @include link-underline-blue-hover-before;
+                @include link-underline-blue-hover-before-2;
             }
 
             &:active {
@@ -24,17 +24,12 @@
         }
     }
 
-    &__login-box {
-        .login-link {
-            @include link-base;
-            padding: 10px 15px;
-            position: relative;
-            z-index: 2;
-            font-weight: 500;
+    .login-link {
+        @include link-base;
+        @include link-underline-blue-1;
 
-            &:hover::before {
-                @include link-underline-blue-hover-before;
-            }
+        &:hover::before {
+            @include link-underline-blue-hover-before-2;
         }
     }
 

@@ -1,9 +1,5 @@
-// AUTHOR CARD
+// AUTHOR IN CARD
 .author {
-    @include flex-align-center;
-    gap: 10px;
-    width: fit-content;
-
     @include medium-screen {
         width: 85%;
     }
@@ -13,7 +9,6 @@
     }
 
     &__img {
-
         display: none;
         @include author-card-img;
 
@@ -38,16 +33,50 @@
             font-size: 40px;
             line-height: 0.5;
             color: $main-color-pink;
-
+            padding: 0 15px;
         }
     }
 }
+
+// AUTHOR IN ACCORDION
+.author.accordion-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .accardion-img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+    }
+
+    .author__text {
+        font-size: 11px;
+        position: relative;
+
+        &--name {
+            margin-right: 12px;
+
+            &::after {
+                content: '\007E';
+                position: absolute;
+                font-size: 20px;
+                line-height: 0;
+                top: 10px;
+                right: -15px;
+                color: $wave-color;
+            }
+        }
+    }
+}
+
 
 // BUTTON
 .main-btn {
     @include gradient-btn;
     @include link-base;
-    padding: 8px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
     color: $color-white;
     font-size: 13px;
@@ -68,26 +97,23 @@
 // CAROUSEL & ACCARDION
 
 .next-btn {
-    @include flex-all-cennter;
+    @include flex-all-center;
     @include gradient-btn;
     border-radius: 50%;
     font-size: 20px;
 
     .bi {
-
         color: $color-white;
     }
 }
 
 .custom-accardion {
     background-color: $color-white;
-    @include flex-all-cennter;
+    @include flex-all-center;
     left: -25px;
     position: relative;
     border-radius: 0 20px 20px 0;
 }
-
-
 
 .number::before {
     content: '';
@@ -95,7 +121,7 @@
     width: 30px;
     height: 30px;
     padding: 12px;
-    @include flex-all-cennter;
+    @include flex-all-center;
     border-radius: 50%;
     margin-right: 20px;
 }
@@ -112,8 +138,6 @@
     content: '3';
 }
 
-
-
 .accardion-inner-box {
     width: 90%;
     @include flex-align-center;
@@ -121,4 +145,60 @@
     flex-direction: column;
     margin-right: 0;
     margin-left: auto;
+}
+
+// BUTTON WAVE
+.wave-hover {
+    position: relative;
+    overflow: hidden;
+
+    span {
+        color: $color-white;
+        position: relative;
+        z-index: 1;
+        transition: 1s;
+    }
+
+    .wave {
+        position: absolute;
+        top: calc(100% + 22px);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.4s ease-in-out;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 400px;
+            height: 32px;
+            background-image: url('data:image/svg+xml,%3Csvg width="352" height="62" viewBox="0 0 352 62" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 18C30 18 58 0 88 0C118 0 146 18 176 18C206 18 234 0 264 0C294 0 322 18 352 18V62H0V18Z" fill="white"%3E%3C/path%3E%3C/svg%3E');
+            background-size: cover;
+            filter: opacity(0.5);
+            animation: smallWave 10s linear infinite;
+        }
+    }
+
+    &:hover .wave {
+        top: 0;
+    }
+}
+
+// PAGINATION START
+.pagination {
+    margin: 20px 0;
+    @include flex-all-center;
+    gap: 15px;
+
+    .next-page {
+        .main-btn {
+            a {
+                @include link-base;
+                color: $color-white;
+            }
+        }
+    }
 }
