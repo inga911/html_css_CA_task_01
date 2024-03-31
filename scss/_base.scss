@@ -3,7 +3,8 @@
     color: $main-dark-text-color;
 
     &::selection {
-        @include text-select;
+        background-color: #302d55;
+        color: $color-white;
     }
 }
 
@@ -18,61 +19,6 @@ body {
 .no-padding {
     padding: 0 !important;
 }
-
-// .header {
-//     position: relative;
-
-//     &::before,
-//     &::after {
-//         content: "";
-//         position: absolute;
-//         left: 0;
-//         width: 120%;
-//         margin-left: -10%;
-//         height: 100%;
-//         background-image: url('https://png.pngtree.com/png-vector/20220525/ourmid/pngtree-undulate-gray-wave-swirl-png-image_4732288.png');
-//         background-position: top;
-//         background-repeat: repeat-x;
-//         background-size: 80%;
-//         transform: rotate(-15deg);
-//         z-index: -2;
-//     }
-
-//     &::before {
-//         top: 0;
-//         animation: header-bg1 3s infinite linear;
-//     }
-
-//     &::after {
-//         bottom: 0;
-//         animation: header-bg2 3s infinite linear;
-//     }
-// }
-
-// @keyframes header-bg1 {
-
-//     0%,
-//     100% {
-//         transform: translateY(0);
-//     }
-
-//     50% {
-//         transform: translateY(-10%);
-//     }
-// }
-
-// @keyframes header-bg2 {
-
-//     0%,
-//     100% {
-//         transform: translateY(0);
-//     }
-
-//     50% {
-//         transform: translateY(10%);
-//     }
-// }
-
 
 .text-blue-underline {
     transition: background-size 0.3s ease;

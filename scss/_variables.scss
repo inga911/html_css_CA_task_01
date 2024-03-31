@@ -12,6 +12,13 @@ $color-black: #000000;
 $main-dark-text-color: #002050;
 $link-blue-underline: rgb(169, 222, 255);
 
+$big-title-font-weight: 600;
+
+$box-shadow: 0 2px 2px rgba(0, 0, 0, 0.331);
+$box-shadow-2: 0 5px 5px rgba(3, 3, 3, 0.254);
+
+$big-wave-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='590' height='336' viewBox='0 0 1000 336'%3E%3Cg clip-path='url(%23clip0_707_191)'%3E%3Cpath d='M1484.98 0.0715289C1402.51 1.91415 1322.66 39.021 1242.81 76.1278C1160.9 114.192 1078.98 152.256 994.246 152.256C909.509 152.256 827.597 114.192 745.685 76.1278C663.772 38.0639 581.86 0 497.123 0C412.387 0 330.474 38.0639 248.562 76.1278C166.65 114.192 84.7374 152.256 0.000428317 152.256L0 334.891C82.4694 333.048 162.322 295.942 242.175 258.835C324.087 220.771 405.999 182.707 490.736 182.707C575.473 182.707 657.385 220.771 739.298 258.835C821.21 296.899 903.122 334.963 987.859 334.963C1072.6 334.963 1154.51 296.899 1236.42 258.835C1318.33 220.771 1400.25 182.707 1484.98 182.707L1484.98 0.0715289Z' fill='%23D6027E' fill-opacity='0.05'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_707_191'%3E%3Crect width='2000' height='335.088' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+
 $mobile: 490px;
 $tablet: 768px;
 $loptop : 1200px;
@@ -32,16 +39,9 @@ $loptop : 1200px;
     color: $color-black;
 }
 
-
-
 @mixin gradient-btn {
     background: $red-gradient ;
     border: none;
-    color: $color-white;
-}
-
-@mixin text-select {
-    background-color: #302d55;
     color: $color-white;
 }
 
@@ -62,6 +62,7 @@ $loptop : 1200px;
     margin-left: 10%;
     z-index: 1;
     animation: linkUnderline 0.3s forwards;
+    cursor: pointer;
 }
 
 @mixin author-card-img {
@@ -71,12 +72,18 @@ $loptop : 1200px;
     box-shadow: 0 5px 5px rgba(22, 22, 22, 0.471);
 }
 
+@mixin bg-img-sett {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// SCREEN
 @mixin small-screen {
     @media (min-width:$mobile) {
         @content;
     }
 }
-
 
 @mixin medium-screen {
     @media (min-width:$tablet) {

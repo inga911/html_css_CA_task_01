@@ -23,3 +23,15 @@
         background-position-x: 508px;
     }
 }
+
+// BIG WAVE
+
+@keyframes bigWave {
+    0% {
+        background-position-x: -200px;
+    }
+
+    100% {
+        background-position-x: 2108px;
+    }
+}

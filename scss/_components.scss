@@ -36,6 +36,20 @@
             padding: 0 15px;
         }
     }
+
+    .wave-after-author {
+        position: relative;
+        margin-right: 25px;
+
+        &::after {
+            content: '\007E';
+            position: absolute;
+            font-size: 30px;
+            top: -10px;
+            right: -20px;
+            color: $wave-color;
+        }
+    }
 }
 
 // AUTHOR IN ACCORDION
@@ -110,9 +124,12 @@
 .custom-accardion {
     background-color: $color-white;
     @include flex-all-center;
-    left: -25px;
     position: relative;
     border-radius: 0 20px 20px 0;
+
+    @include medium-screen {
+        left: -25px;
+    }
 }
 
 .number::before {
@@ -156,7 +173,7 @@
         color: $color-white;
         position: relative;
         z-index: 1;
-        transition: 1s;
+        transition: 0.2s;
     }
 
     .wave {
@@ -165,7 +182,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        transition: 0.4s ease-in-out;
+        transition: 0.3s ease-in-out;
         overflow: hidden;
 
         &::before {
@@ -187,7 +204,7 @@
     }
 }
 
-// PAGINATION START
+// PAGINATION
 .pagination {
     margin: 20px 0;
     @include flex-all-center;
@@ -200,5 +217,31 @@
                 color: $color-white;
             }
         }
+    }
+}
+
+
+// FORM
+form {
+    margin: 10px auto;
+    width: 80%;
+
+    input {
+        padding: 12px;
+    }
+
+    .main-btn {
+        font-weight: 600;
+        font-size: 12px;
+
+        @include large-screen {
+            font-size: 16px;
+        }
+    }
+
+    input::placeholder {
+        color: rgb(172, 171, 171);
+        font-size: 14px;
+        letter-spacing: 1px;
     }
 }

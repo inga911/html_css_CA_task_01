@@ -3,16 +3,14 @@
     @include flex-align-center;
 
     &__hamburger-menu {
-        color: $color-black;
+        color: $main-dark-text-color;
         font-size: 30px;
     }
 
     &__nav {
         a {
             @include link-base;
-            padding: 10px 15px;
-            position: relative;
-            font-weight: 500;
+            @include link-underline-blue-1;
 
             &:hover::before {
                 @include link-underline-blue-hover-before-2;
@@ -38,7 +36,7 @@
         border-radius: 50%;
         padding: 8px 13px;
 
-        .bi {
+        .bi-search {
             color: $color-white;
         }
     }

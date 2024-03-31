@@ -1,0 +1,37 @@
+.header-bg,
+.bg-wave-1,
+.bg-wave-2 {
+    position: absolute;
+    width: 184%;
+    height: 100%;
+    background-size: auto;
+    background-repeat: repeat-x;
+    z-index: 0;
+    pointer-events: none;
+    transform: rotate(5deg);
+}
+
+.header-bg {
+    top: 20px;
+    left: -91px;
+    background-image: $big-wave-svg;
+    animation: bigWave 60s cubic-bezier(.56, .45, .53, .75) infinite;
+    transform: rotate(-3deg);
+
+    .bg-wave-1 {
+        top: 40px;
+        left: -91px;
+        background-image: $big-wave-svg;
+        animation: bigWave 60s cubic-bezier(.56, .45, .53, .75) infinite;
+        transform: rotate(-2deg);
+    }
+
+    .bg-wave-2 {
+        top: 10px;
+        left: -91px;
+        background-image: $big-wave-svg;
+        animation: bigWave 60s cubic-bezier(.56, .45, .53, .75) infinite;
+        transform: rotate(-5deg);
+
+    }
+}

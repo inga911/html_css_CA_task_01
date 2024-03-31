@@ -1,25 +1,24 @@
 .article-main-title {
-    font-weight: 600;
+    font-weight: $big-title-font-weight;
     position: relative;
     margin-left: 40px;
 
-    &::before {
-        content: '\007E';
-        position: absolute;
-        font-size: 50px;
-        line-height: 0.3;
-        top: 3px;
-        left: -30px;
-        color: $wave-color;
-    }
-
+    &::before,
     &::after {
         content: '\007E';
         position: absolute;
         font-size: 50px;
         line-height: 0.3;
-        bottom: 3px;
         left: -30px;
+    }
+
+    &::before {
+        top: 3px;
+        color: $wave-color;
+    }
+
+    &::after {
+        bottom: 3px;
         color: $main-color-pink;
     }
 
@@ -38,30 +37,60 @@
     padding: 20px;
 
     .card-img {
+        border-radius: 20px;
         box-shadow: 0 6px 6px rgba(0, 0, 0, 0.294);
         height: 250px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 20px;
         position: relative;
-        overflow: hidden;
+        @include bg-img-sett;
 
-        .lock-bg {
+        .lock-bg,
+        .premium-bg {
             width: 40px;
             height: 40px;
             background-color: $color-yellow;
             position: absolute;
             left: 30px;
             border-radius: 0 0 5px 5px;
+            box-shadow: $box-shadow;
             @include flex-all-center;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.322);
 
-            .lock-svg {
+            .lock-svg,
+            .premium-svg {
                 width: 20px;
                 height: 20px;
+                position: relative;
+            }
+
+            &:hover::before {
+                opacity: 1;
             }
         }
+
+        .lock-bg::before,
+        .premium-bg::before {
+            opacity: 0;
+            position: absolute;
+            top: -40px;
+            font-size: 12px;
+            background-color: $color-white;
+            width: 120px;
+            text-align: center;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-shadow: $box-shadow;
+            transition: opacity 0.35s ease;
+            opacity: 0;
+        }
+
+        .lock-bg::before {
+            content: "Member's Article";
+
+        }
+
+        .premium-bg::before {
+            content: 'Premium Article';
+        }
+
 
         &:hover {
             cursor: pointer;
@@ -71,8 +100,52 @@
             @include medium-screen {
                 opacity: 1;
             }
-
         }
+
+        .card-img-text {
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.439) 10%, rgba(0, 0, 0, 0) 100%);
+            transition: opacity 0.35s ease;
+            border-radius: 0 0 20px 20px;
+            @include flex-all-center;
+            gap: 10px;
+
+            i,
+            span {
+                color: $color-white;
+                font-size: 14px;
+                letter-spacing: 0.8px;
+                position: relative;
+            }
+        }
+
+        .card-img-text:hover span::before {
+            opacity: 1;
+        }
+
+        .card-img-text span::before {
+            content: 'Go to comments';
+            position: absolute;
+            top: -40px;
+            left: -35px;
+            font-size: 12px;
+            background-color: $color-white;
+            width: 150px;
+            text-align: center;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-shadow: $box-shadow;
+            color: $main-dark-text-color;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
     }
 
     .card-img-1 {
@@ -112,7 +185,8 @@
 
         .article-title {
             font-size: 18px;
-            font-weight: 600;
+            font-weight: $big-title-font-weight;
+
 
             @include large-screen {
                 font-size: 28px;
@@ -135,6 +209,7 @@
             }
 
             .read-time {
+                padding-right: 20px;
                 color: #4D6385;
             }
         }
@@ -145,30 +220,5 @@
             width: 250px;
             height: 250px;
         }
-    }
-}
-
-.card-img-text {
-    display: block;
-    opacity: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.439) 10%, rgba(0, 0, 0, 0) 100%);
-    transition: opacity 0.35s ease;
-
-    i,
-    span {
-        color: $color-white;
-        font-size: 14px;
-        letter-spacing: 0.8px;
-
     }
 }
